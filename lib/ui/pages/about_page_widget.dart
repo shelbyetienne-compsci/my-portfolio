@@ -13,17 +13,35 @@ class AboutPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final width = MediaQuery.of(context).size.width;
+    final isMobile = width < 700;
 
-    return PageWidget(
-      sectionKey: sectionKey,
-      needsMaxConstraint: true,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Expanded(child: DescriptionWidget()),
-          Expanded(child: SkillsGrid()),
-        ],
-      ),
-    );
+    return isMobile
+        ? PageWidget(
+            sectionKey: sectionKey,
+            needsMaxConstraint: false,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 24),
+              child: Column(
+                spacing: 24,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  DescriptionWidget(),
+                  SkillsGrid(),
+                ],
+              ),
+            ),
+          )
+        : PageWidget(
+            sectionKey: sectionKey,
+            needsMaxConstraint: true,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(child: DescriptionWidget()),
+                Expanded(child: SkillsGrid()),
+              ],
+            ),
+          );
   }
 }
