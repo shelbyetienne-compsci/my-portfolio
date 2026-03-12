@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_portfolio/ui/skills_widget.dart';
 import 'package:my_portfolio/ui/widgets/page_widget.dart';
 
-import 'description_widget.dart';
+import '../description_widget.dart';
 
 class AboutPage extends ConsumerWidget {
   final GlobalKey sectionKey;

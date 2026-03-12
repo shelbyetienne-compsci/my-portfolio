@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_portfolio/colors.dart';
 import 'package:my_portfolio/theme.dart';
-import 'package:my_portfolio/ui/animated_background_widget.dart';
-import 'package:my_portfolio/ui/contact_page_widget.dart';
+import 'package:my_portfolio/ui/widgets/animated_background_widget.dart';
+import 'package:my_portfolio/ui/pages/contact_page_widget.dart';
 import 'package:my_portfolio/ui/app_bar_widget.dart';
-import 'package:my_portfolio/ui/about_page_widget.dart';
-import 'package:my_portfolio/ui/experience_page_widget.dart';
+import 'package:my_portfolio/ui/pages/about_page_widget.dart';
+import 'package:my_portfolio/ui/pages/experience_page_widget.dart';
 import 'package:my_portfolio/ui/footer_widget.dart';
-import 'package:my_portfolio/ui/project_page_widget.dart';
+import 'package:my_portfolio/ui/pages/project_page_widget.dart';
 
 void main() {
   runApp(const ProviderScope(child: MainPage()));

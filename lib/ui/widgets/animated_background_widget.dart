@@ -1,7 +1,7 @@
 import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
 
-import '../colors.dart';
+import '../../colors.dart';
 
 // MyAnimatedBackground class is stateful class.
 class AnimatedBackgroundWidget extends StatefulWidget {
