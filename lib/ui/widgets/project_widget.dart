@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/colors.dart';
 import 'package:my_portfolio/ui/widgets/project_description_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectWidget extends StatelessWidget {
   final String imagePath;
@@ -22,6 +23,14 @@ class ProjectWidget extends StatelessWidget {
     required this.languageList,
   });
 
+  Future<void> _launchUrl(String urlString) async {
+    final Uri url = Uri.parse(urlString);
+    if (!await launchUrl(url)) {
+      throw 'Could not launch $urlString';
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -35,7 +44,12 @@ class ProjectWidget extends StatelessWidget {
           return Container(
             width: itemWidth,
             constraints: BoxConstraints(maxWidth: itemWidth, maxHeight: 444),
-            child: GestureDetector(
+            child: InkWell(
+              onTap: (){
+                _launchUrl(projectLink);
+              },
+              hoverColor: Colors.transparent,
+              splashColor: Colors.transparent,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(32.0),
                 child: isMobile
