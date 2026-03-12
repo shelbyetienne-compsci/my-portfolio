@@ -24,7 +24,7 @@ class ExperienceWidget extends StatelessWidget {
     return isMobile
         ? SizedBox(
             height: 124,
-            width: width * 0.7,
+            width: width * 0.8,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -34,11 +34,14 @@ class ExperienceWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      company,
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
+                    SizedBox(
+                      width: width / 3,
+                      child: Text(
+                        company,
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
                     Text(
@@ -52,7 +55,7 @@ class ExperienceWidget extends StatelessWidget {
                 ),
                 Spacer(),
                 SizedBox(
-                  width: width/4,
+                  width: width / 4,
                   child: Text(
                     position,
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
