@@ -34,6 +34,15 @@ class ProjectPageWidget extends StatelessWidget {
             projectLink: "https://www.youversion.com/bible-app-lite",
             languageList: ["Flutter", "Dart", "Firebase"],
           ),
+          ProjectWidget(
+            imagePath: "assets/images/shelby-bible-app.png",
+            projectName: "Personal Bible App",
+            projectYear: "2025",
+            projectRole: "Built simply to read the word and take notes.",
+            projectDescription: "Bible reader application with offline support to deliver a smooth reading and study experience across mobile and web platforms.",
+            projectLink: "https://github.com/shelbyetienne-compsci/Shelby-Bible-App",
+            languageList: ["Flutter", "Dart", "Firebase", "API", "SQL", "Riverpod"],
+          )
         ],
       ),
     );

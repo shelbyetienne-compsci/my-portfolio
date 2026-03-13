@@ -24,13 +24,17 @@ class DescriptionWidget extends ConsumerWidget {
 
         const SizedBox(height: 30),
 
-        SizedBox(
-          width: 400,
-          child: const Text(
-            "I’m a software engineer with experience building mobile and cross-platform applications using Flutter. I enjoy creating responsive, well-designed interfaces and developing software that balances performance, usability, and maintainability.",
-            style: TextStyle(
-              fontSize: 16,
-              height: 1.6,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: 400),
+            child: const Text(
+              "I’m a software engineer with experience building mobile and cross-platform applications using Flutter. I enjoy creating responsive, well-designed interfaces and developing software that balances performance, usability, and maintainability.",
+              style: TextStyle(
+                fontSize: 16,
+                height: 1.6,
+              ),
+              textAlign: TextAlign.center,
             ),
           ),
         ),
